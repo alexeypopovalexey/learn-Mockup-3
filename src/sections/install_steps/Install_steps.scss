@@ -1,0 +1,58 @@
+@import '../../style_scss/main.scss';
+
+.install {
+    background: linear-gradient(to bottom, $bg-color-top-half 50%, $main-bg 50% 100%);
+    padding-top: 65px;
+    padding-bottom: 120px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__intro {
+        width: 37%;
+    }
+    &__acardion{
+
+        &--wrapper {
+            width: 57%;
+        }
+    } 
+    &__title {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+        color: $main-text-color;
+        margin-bottom: 25px;
+    }
+    &__img {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .install {
+        &__intro {
+            width: 100%;
+        }
+        &__acardion{
+
+            &--wrapper {
+                width: 100%;
+            }
+        } 
+    }
+}
+
+@media (max-width: 576px) {
+    .install {
+        padding-bottom: 50px;
+        &__title {
+            font-size: 28px;
+            line-height: 34px;
+        }
+    }
+}

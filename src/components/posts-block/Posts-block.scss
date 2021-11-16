@@ -1,0 +1,53 @@
+@import '../../style_scss/main.scss';
+
+.posts {
+    &__block {
+        width: 30%;
+        margin-top: 55px;
+        z-index: 1;
+        &--title {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: $posts-text-color;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        &--text {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: $posts-text-color;
+        }
+    }
+    &__video {
+        &--wrapper {
+            width: 100%;
+            height: max-content;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+  .posts {
+    &__block {
+      width: 40%;
+      margin: auto;
+      margin-top: 55px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .posts {
+    &__block {
+      width: 80%;
+      margin: auto;
+      margin-top: 55px;
+    }
+  }
+}

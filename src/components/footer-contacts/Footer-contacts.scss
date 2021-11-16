@@ -1,0 +1,62 @@
+@import '../../style_scss/main.scss';
+
+.footer {
+    &__contacts {
+      z-index: 1;
+        &--title {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+            color: $main-bg;
+        }
+        &--elem {
+          margin-top: 24px;
+          width: 70%;
+        }
+        &--link {
+          display: flex;
+          font-family: $fonts-major;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 24px;
+          color: $footer-text-color;
+          text-decoration: none;
+          outline: none;
+          cursor: pointer;
+          &:hover,&:focus {
+            text-decoration: underline;
+          }
+          &:focus-visible {
+            border: 4px solid blue;
+          }
+        }
+    }
+    &__wrapper {
+      &--icon {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+      }
+    }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__contacts {
+      width: 45%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer{
+    &__contacts {
+      width: 100%;
+    }
+  }
+}

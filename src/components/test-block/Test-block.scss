@@ -1,0 +1,94 @@
+@import '../../style_scss/main.scss';
+
+.test {
+    &__block {
+        width: 100%;
+        margin: 0;
+        border-radius: 10px;
+        border: 1px solid $test-border-color;
+        position: relative;
+        cursor: pointer;
+        &:hover,&:focus {
+          top: -9px;
+          box-shadow: 0px 0px 10px $test-text-color;
+        }
+        &--wrapper {
+            width: 24%;
+        }
+        &--img {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+        &--content {
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        &--title {
+            font-family: $fonts-minor;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 26px;
+            color: $test-text-color;
+        }
+        &--text {
+            font-family: $fonts-minor;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: $test-text-color;
+            margin: 8px 0px;
+        }
+        &--btns {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 16px;
+        }
+        &--btn {
+            background: $test-btn-bg;
+            border-radius: 8px;
+            font-family: $fonts-minor;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $test-text-color;
+            border: none;
+            margin-right: 5px;
+            outline: none;
+            border: 2px solid $main-bg;
+            cursor: pointer;
+            &:hover,&:focus {
+              border: 2px solid $test-btn-bg;
+              background: $main-bg;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+  .test{
+    &__block{
+      margin-top: 20px;
+      &--wrapper {
+        width: 48%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .test{
+    &__block{
+      &--wrapper {
+        width: 100%;
+      }
+    }
+  }
+}

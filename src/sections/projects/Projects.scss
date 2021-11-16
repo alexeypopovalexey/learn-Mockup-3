@@ -1,0 +1,16 @@
+.projects{
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        &__container {
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+    }
+}

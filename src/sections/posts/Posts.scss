@@ -1,0 +1,51 @@
+@import '../../style_scss/main.scss';
+
+
+.posts {
+  background-color: $posts-bg-color;
+  position: relative;
+    &__container {
+        padding: 75px 0px;
+    }
+    &__title {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+        color: $posts-text-color;
+        width: 50%;
+    }
+    &__subtitle {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        color: $posts-text-color;
+        width: 50%;
+        margin-top: 10px;
+    }
+    &__qoutes{
+        &--bg {
+          position: absolute;
+          top: 48px;
+          right: 48px;
+          opacity: .3;
+          z-index: 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+  .posts {
+    &__title {
+      width: 90%;
+      margin: auto;
+    }
+    &__subtitle {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}

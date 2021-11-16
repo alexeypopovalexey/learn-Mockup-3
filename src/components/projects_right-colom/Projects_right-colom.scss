@@ -1,0 +1,13 @@
+.projects {
+    &__right {
+        width: 44%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        &__right {
+            width: 100%;
+        }
+    }
+}

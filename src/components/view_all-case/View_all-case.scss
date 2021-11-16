@@ -1,0 +1,24 @@
+@import '../../style_scss/main.scss';
+
+.view{
+    &__link {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $active-header-btn;
+        text-decoration: none;
+        outline: none;
+        &:focus,&:hover {
+            font-weight: 800;
+        }
+        &:focus-visible {
+            border: 4px blue solid;
+            box-sizing: border-box;
+        }
+        &--arrow {
+            margin-left: 10px;
+        }
+    }
+}

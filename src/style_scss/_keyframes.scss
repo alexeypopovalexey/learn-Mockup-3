@@ -1,0 +1,45 @@
+@keyframes active-burger {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 20vw;
+    }
+}
+
+@keyframes disactive-burger {
+    0% {
+        width: 100vw;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+@keyframes drop-down {
+    0% {
+        height: 0px;
+    }
+    99% {
+        height: 120px;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes off-drop-down {
+    0% {
+        height: auto;
+    }
+    1% {
+        height: 100px;
+    }
+    99% {
+        height: 0px;
+    }
+    100% {
+        visibility: hidden;
+        height: 0px;
+    }
+}

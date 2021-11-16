@@ -1,0 +1,128 @@
+@import '../../style_scss/main.scss';
+
+.header{
+    &__authorization {
+        width: max-content;
+        margin-left: auto;
+        &--wrapper {
+            width: max-content;
+            padding: 20px 16px 16px 16px;
+            display: flex;
+            justify-content: start;
+            box-sizing: border-box;
+
+        }
+        &--btn {
+            width: auto;
+            height: auto;
+            font-family: $fonts-minor;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: $main-bg;
+            outline: none;
+            background-color: $active-header-btn;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            box-sizing: border-box;
+            &:focus-visible {
+                border: 4px solid blue;
+            }
+            &:hover {
+                color: $active-header-btn;
+                background-color: $disactive-header-btn;
+            }
+        }
+    }
+}
+
+.drop{
+    &__wrapper {
+        display: none;
+    }
+
+    &__btn {
+        display: flex;
+        flex-wrap: nowrap;
+        
+    }
+    &__arrow {
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .header {
+        &__authorization  {
+            padding-top: 20px;
+            position: relative;
+            &--wrapper {
+                padding: 0px;
+                position: absolute;
+                right: 0px;
+                top: 50px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                animation-name: drop-down;
+                animation-duration: 600ms;
+            }
+            &--btn {
+                margin-top: 10px;
+            }
+        }
+    }
+    .header__authorization--disactive {
+        animation-name: off-drop-down;
+        animation-duration: 600ms;
+        animation-fill-mode: forwards;
+    }
+    .drop{
+        &__wrapper {
+            display: block;
+        }
+        &__btn {
+            border: none;
+            background-color: $main-bg;
+            align-items: center;
+            cursor: pointer;
+            outline: none;
+            &:focus-visible {
+                border: 4px solid blue;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .drop {
+        &__authorization  {
+          position: relative;
+          margin-left: auto;
+        }
+        &__wrapper {
+          position: absolute;
+          right: 15px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+  .drop {
+      &__authorization  {
+        position: static;
+      }
+      &__wrapper {
+        position: static;
+      }
+  }
+}
+
+.arrow-active {
+    transform: rotate(180deg);
+}

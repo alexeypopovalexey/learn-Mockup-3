@@ -1,0 +1,46 @@
+{
+
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:jest/recommended",
+    "prettier",
+    "react-app",
+    "react-app/jest"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "rules": {
+    "require-jsdoc": 0,
+    "prettier/prettier": "error",
+    "import/prefer-default-export": 0,
+    "quotes": ["error", "single"]
+  },
+  "overrides": [{
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+
+      }
+    },
+    {
+
+      "files": [
+        "**/*.spec.js"
+      ],
+      "rules": {
+        "no-undef": "warn",
+        "jest/no-disabled-tests": "warn"
+      }
+    }
+  ]
+}

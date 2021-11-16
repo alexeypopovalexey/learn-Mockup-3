@@ -1,0 +1,65 @@
+@import '../../style_scss/main.scss';
+
+.waitlist {
+    padding: 65px 0px;
+    &__container {
+        position: relative;
+        display: flex;
+        background-image: url('../../assets/images/waitlist/BG-Mask.png');
+        background-repeat: no-repeat;
+        border-radius: 16px;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    &__icon {
+        width: 43%;
+        display: flex;
+        justify-content: center;
+        padding: 64px 0px 64px 64px;
+        box-sizing: border-box;
+    }
+    &__title {
+        width: 70%;
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 54px;
+        color: $main-bg;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .waitlist {
+        &__icon {
+            width: auto;
+            padding-right: 64px;
+        }
+        &__title {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .waitlist {
+        &__icon {
+            display: none;
+        }
+        &__content {
+            padding: 0px 50px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .waitlist {
+        &__title {
+        font-size: 24px;
+        line-height: 34px;
+        }
+    }
+}

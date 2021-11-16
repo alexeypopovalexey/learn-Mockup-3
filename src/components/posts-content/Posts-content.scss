@@ -1,0 +1,9 @@
+.posts {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: start;
+    }
+}

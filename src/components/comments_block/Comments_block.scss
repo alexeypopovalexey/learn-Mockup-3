@@ -1,0 +1,79 @@
+@import '../../style_scss/main.scss';
+
+.comments {
+    &__block {
+        display: flex;
+        flex-direction: column;
+        padding: 32px;
+        background-color: $main-bg;
+        border-radius: 8px;
+        &--hubspot {
+          width: 60%;
+          margin-left: auto;
+        }
+        &--airbnb {
+          width: 80%;
+          margin-top: 105px;
+        }
+        &--bms {
+          margin-top: 32px;
+          width: 60%;
+          margin-right: auto;
+        }
+        &--logo {
+          width: 40%;
+          margin-bottom: 30px;
+        }
+    }
+    &__content {
+      display: flex;
+      &--icon {
+        margin-right: 16px;
+      }
+      &--comment {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 32px;
+        color: $main-text-color;
+        margin-bottom: 24px;
+      }
+      &--name {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        color: $main-text-color;
+      }
+      &--subtitle {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: $commtents-subtitle-color;
+      }
+    }
+
+}
+
+@media (max-width: 768px) {
+  .comments {
+    &__block {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 0;
+      padding: 16px;
+      margin-bottom: 35px;
+    }
+    &__content {
+      &--comment {
+
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}

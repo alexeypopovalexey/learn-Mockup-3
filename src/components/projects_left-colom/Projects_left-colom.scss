@@ -1,0 +1,25 @@
+@import '../../style_scss/main.scss';
+
+.projects{
+    &__title {
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+        color: $main-text-color;
+        margin-bottom: 80px;
+    }
+    &__left{
+        width: 44%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .projects {
+        &__left {
+            width: 100%;
+        }
+    }
+}

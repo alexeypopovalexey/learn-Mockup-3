@@ -1,0 +1,98 @@
+@import '../../style_scss/main.scss';
+
+
+.install{
+    &__acardion{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        cursor: pointer;
+        &--0 {
+            background-color: $active-header-btn;
+        }
+        &--1 {
+            background-color: $second-elem-acardion;
+        }
+        &--2 {
+            background-color: $third-elem-acardion;
+        }
+        &--circle {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background-color: $main-bg;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--title {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $text-color-acardion;
+            margin-bottom: 8px;
+        }
+        &--text {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: $text-color-acardion;
+        }
+        &--block {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        &--tool {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--content {
+            width: 60%;
+            padding: 48px 50px;
+        }
+        &--item {
+            height: 0px;
+            opacity: 0;
+            transition: all 600ms cubic-bezier(0,1,0,1);
+            overflow: hidden;
+        }
+        &--show{
+            height: auto;
+            opacity: 1;
+            transition: all 600ms cubic-bezier(1,0,1,0);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .install {
+        &__acardion {
+            &--block {
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+            }
+            &--content {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            &--tool{
+                width: 100%;
+                justify-content: center;
+                padding-top: 20px;
+            }
+        }
+    }
+}

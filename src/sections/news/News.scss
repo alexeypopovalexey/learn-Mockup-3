@@ -1,0 +1,55 @@
+@import '../../style_scss/main.scss';
+
+.news {
+    &__container {
+        padding: 65px 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    &__title {
+        width: 60%;
+        margin: auto;
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+        color: $main-text-color;
+        margin-bottom: 45px;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-around;
+      &--image {
+        width: 40%;
+      }
+      &--img {
+        width: 100%;
+      }
+      &--acardion {
+        width: 50%;
+      }
+    }
+}
+
+@media (max-width: 768px) {
+  .news {
+    &__content {
+      width: 90%;
+      &--image {
+        display: none;
+      }
+      &--acardion {
+        width: 100%;
+      }
+    }
+    &__title {
+      width: 80%;
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+}

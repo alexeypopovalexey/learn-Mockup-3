@@ -1,0 +1,160 @@
+@import '../../style_scss/main.scss';
+
+.header {
+    &__nav {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        width: auto;
+        &--list {
+            list-style: none;
+            display: flex;
+            list-style-position: inherit;
+            padding-left: 17px;
+            padding-top: 13px;
+        }
+        &--elem {
+            padding: 10px 6px;
+            height: 30px;
+        }
+        &--more {
+          display: flex;
+          flex-wrap: nowrap;
+          height: auto;
+          box-sizing: border-box;
+          padding: 0;
+        }
+        &--link {
+            width: max-content;
+            cursor: pointer;
+            padding: 10px;
+            font-family: $fonts-minor;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration: none;
+            color: $main-text-color; 
+            outline: none;
+            flex-wrap: nowrap;
+            &:hover {
+                font-weight: 800;
+            }
+            &:focus-visible {
+                box-sizing: border-box;
+                border: 5px solid blue;
+            }
+        }
+        &--btn {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            outline: none;
+        }
+    }
+}
+.burger {
+    display: none;
+}
+@media (max-width: 1200px) { 
+    .header {
+        &__nav {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 991px) { 
+  .header {
+      &__nav {
+        flex-grow: 0;
+      }
+  }
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__nav {
+            order: 0;
+            justify-content: start;
+            width: 250px;
+            overflow-x: hidden;
+            animation-name: active-burger;
+            animation-duration: 1000ms;
+            position: fixed;
+            top: 60px;
+            left: 0px;
+            height: max-content;
+            background-color: $main-bg;
+            &--list {
+                margin-top: 0;
+                flex-direction: column;
+                justify-content: start;
+                position: relative;
+                height: auto;
+            }
+            &--elem {
+                padding-left: 0;
+                text-align: left;
+            }
+            &--link {
+                padding-left: 0;
+            }
+        }
+    }
+    .header__nav--disactive {
+        
+        animation-name: disactive-burger;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    .burger {
+        width: max-content;
+        display: block;
+        margin-top: 10px;
+        position: fixed;
+        width: 44px;
+        height: 36px;
+        left: 15px;
+        top: 10px;
+        box-sizing: border-box;
+        border: none;
+        background-color: $main-bg;
+        opacity: .9;
+        cursor: pointer;
+        outline: none;
+        border: 4px solid $main-bg;
+        &:focus-visible {
+            border: 4px solid blue;
+        }
+        &__line {
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: $main-text-color;
+            left: 8px;
+            &::before {
+                content: ' ';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background-color: $main-text-color;
+                left: 0px;
+                bottom: 8px;
+            }
+            &::after {
+                content: ' ';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                background-color: $main-text-color;
+                left: 0px;
+                top: 8px;
+            }
+        }
+    }
+    .displaynone-nav {
+      display: none;
+    }
+}
+

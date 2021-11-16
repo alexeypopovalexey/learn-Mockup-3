@@ -1,0 +1,14 @@
+@import '../../style_scss/main.scss';
+
+.feature {
+    padding: 64px 0px;
+    &__title {
+        margin-bottom: 50px;
+        font-family: $fonts-major;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 64px;
+        color: $main-text-color;
+    }
+}

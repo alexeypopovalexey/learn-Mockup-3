@@ -1,0 +1,20 @@
+@import '../../style_scss/main.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $main-bg;
+    z-index: 1;
+    &__wrapper {
+        display: flex;
+    }
+}
+
+@media (max-width: 576px) { 
+    .header {
+        &__wrapper {
+            justify-content: end;
+        }
+    }
+}

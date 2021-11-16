@@ -1,0 +1,189 @@
+@import '../../style_scss/main.scss';
+
+.news{
+    &__link {
+      &--wrapper {
+        width: max-content;
+        margin-left: auto;
+        padding: 35px 5px 25px 5px;
+      }
+    }
+    &__acardion{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin: auto;
+        &--title {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 1px;
+            padding-left: 16px;
+            margin-left: 16px;
+            position: relative;
+        }
+        &--text {
+            font-family: $fonts-major;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            padding-left: 16px;
+            margin-left: 16px;
+        }
+        &--block {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+        &--tool {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &--content {
+            width: 80%;
+        }
+        &--item {
+            height: 0px;
+            opacity: 0;
+            transition: all 600ms cubic-bezier(0,1,0,1);
+            overflow: hidden;
+        }
+        &--show{
+            height: auto;
+            opacity: 1;
+            transition: all 600ms cubic-bezier(1,0,1,0);
+        }
+        &--0 {
+          border-left: 1px dotted $first-before-news;
+          margin-left: 16px;
+          padding-left: 16px;
+          
+        }
+        &--1 {
+          border-left: 1px dotted $second-before-news;
+          margin-left: 16px;
+          padding-left: 16px;
+        }
+        &--2 {
+          border-left: 1px dotted $third-before-news;
+          margin-left: 16px;
+          padding-left: 16px;
+        }
+    }
+    &__before {
+      &--News {
+        &::before {
+          position: absolute;
+          content: ' ';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $first-before-news;
+          left: -4px;
+          top: 40%;
+          z-index: 2;
+        }
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 3px;
+          height: 50%;
+          border-radius: 50%;
+          background-color: $main-bg;
+          left: -2px;
+          top: 0px;
+          z-index: 1;
+        }
+      }
+      &--Insights {
+        &::before {
+          position: absolute;
+          content: ' ';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $second-before-news;
+          left: -4px;
+          top: 40%;
+        }
+      }
+      &--Events {
+        &::before {
+          position: absolute;
+          content: ' ';
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $third-before-news;
+          left: -4px;
+          top: 40%;
+          z-index: 2;
+        }
+        &::after {
+          position: absolute;
+          content: ' ';
+          width: 3px;
+          height: 50%;
+          border-radius: 50%;
+          background-color: $main-bg;
+          left: -2px;
+          bottom: 0px;
+          z-index: 1;
+        }
+      }
+    }
+    
+    &__header {
+        &--News {
+            background-color: $first-elem-news;
+            position: relative;
+          &::after {
+            position: absolute;
+            content: ' ';
+            height: 40%;
+            top: 0;
+            width: 5px;
+            left: 14px;
+            background-color: $first-elem-news;
+            z-index: 1;
+          }
+        }
+        &--Insights {
+            background-color: $second-elem-news;
+        }
+        &--Events {
+            background-color: $third-elem-news;
+            position: relative;
+            &::after {
+              position: absolute;
+              content: ' ';
+              height: 50%;
+              bottom: 0;
+              width: 5px;
+              left: 14px;
+              background-color: $third-elem-news;
+              z-index: 1;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+  .news {
+    &__acardion {
+      width: 100%;
+      &--content {
+        width: 100%;
+      }
+    }
+  }
+}
